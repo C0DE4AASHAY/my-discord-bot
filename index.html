@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Fixed file path -->
+    <script src="https://kit.fontawesome.com/0be2e09a77.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="logo.png" alt="logo" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>CODER / DEVELOPER</p>
+            <h1>Hi, I'm <span>Aashay</span><br> Kashyap From India</h1>
+        </div>
+    </div>
+</div>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="user.png" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>In this video we will create a personal portfolio 
+                website design step by step using HTML CSS and JavaScript. 
+                You can use this website to make your online resume or CV. 
+                In this website design we will add name, designation of the 
+                user. Then we will display the image, skills, work experience 
+                and education details. We will also add the list of services and
+                work portfolio on this website. In the footer of this website we
+                will add contact info and contact form. Your can receive the contact
+                form data on your google sheets.</p>
+
+                <div class="tab-title">
+                    <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience', event)">Experience</p>
+                    <p class="tab-links" onclick="opentab('education', event)">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designign Web/App Interface</li>
+                        <li><span>Web Developer</span><br>Web Develoment</li>
+                        <li><span>App Developer</span><br>App Development</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2009 - 2013</span><br>TCS - Web Developer</li>
+                        <li><span>2014 - 2020</span><br>PAYPAL - App Tester / Compiler</li>
+                        <li><span>2020 - 2025</span><br>GOOGLE - Cloud Computing</li>
+                    </ul>
+                </div>
+                <div class="tab-contents"  id="education">
+                    <ul>
+                        <li><span>2003</span><br>DAV PUBLIC SCHOOL</li>
+                        <li><span>2005</span><br>SRT PUBLIC SCHOOL</li>
+                        <li><span>2006</span><br>B.TECH IN CSE - IIT BOMBAY </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ---------------- SERVICES ---------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                    Dolorum, est impedit, veniam molestias saepe illum eligendi 
+                    asperiores temporibus maxime repellat architecto, consectetur 
+                    at laboriosam iusto cum deserunt adipisci fuga amet?</p>
+                    <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop-simple"></i>
+                <h2>UI/UX Design</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                    Dolorum, est impedit, veniam molestias saepe illum eligendi 
+                    asperiores temporibus maxime repellat architecto, consectetur 
+                    at laboriosam iusto cum deserunt adipisci fuga amet?</p>
+                    <a href="#">learn more</a>
+            </div> <!-- Added missing closing div tag -->
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App Design</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                    Dolorum, est impedit, veniam molestias saepe illum eligendi 
+                    asperiores temporibus maxime repellat architecto, consectetur 
+                    at laboriosam iusto cum deserunt adipisci fuga amet?</p>
+                    <a href="#">learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    function opentab(tabName, event) { /* Added event parameter */
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tab-contents");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tab-links");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active-link", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        event.currentTarget.className += " active-link";
+    }
+
+</script>
+
+
+</body>
+</html>
